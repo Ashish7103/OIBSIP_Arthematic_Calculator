@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: rgba(255, 0, 255, 0.444);
+  z-index: 1;
+}
+
+/* ..........CONTAINER............ */
+
+.container {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border: 2px solid blue;
+  border-radius: 8px;
+  /* overflow: hidden; */
+
+  height: 600px;
+  width: 400px;
+  background-color: rgb(26, 26, 26);
+  /* background-image: linear-gradient(45deg, rgba(96, 28, 141, 0.901), rgba(170, 22, 211, 0.787)); */
+  box-shadow: 3px 3px 5px 5px rgba(58, 58, 58, 0.927);
+
+  /* background-image:linear-gradient(to right  red blue); */
+  /* background-image: linear-gradient(45deg rgb(167,22,102 ) rgb(211,22,56) ); */
+
+  display: grid;
+  grid-template-rows: 1fr 3fr 0.5fr;
+}
+
+/* ..........BOX-1........... */
+.box-1 {
+  display: grid;
+  /* place-items: center; */
+}
+/* .calc:focus{
+    z-index: 1  ;
+    /* background-color: rgb(8,112,100)         !important; */
+/* color: white;
+    overflow: hidden; */
+
+button {
+  outline: 4px ridge;
+  outline-offset: 0px;
+}
+
+.calc {
+  display: block;
+  height: 100px;
+  width: 95%;
+  margin: auto;
+  margin-top: 9px;
+  border-radius: 8px;
+  text-align: right;
+  padding-right: 4px;
+  background-color: rgb(40, 40, 58);
+  font-size: 40px;
+  overflow: hidden;
+  color: aqua;
+  border: 0.3px none black;
+}
+
+/* ..........BOX-2........... */
+
+.button {
+  cursor: pointer;
+
+  height: 60px;
+  width: 60px;
+
+  background-color: rgb(75, 75, 75);
+  opacity: 0.6;
+  box-shadow: 1px 1px 1px 2px rgba(193, 188, 188, 0.52);
+  border: 4px solid;
+  border: none;
+
+  border-radius: 50%;
+
+  font-weight: bold;
+  font-size: 25px;
+  color: whitesmoke;
+}
+.button:hover {
+  opacity: 1;
+}
+
+.box-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  /* margin: auto; */
+}
+
+/* ... backspace button....... */
+#button-4,
+.btn-percent,
+#button-8,
+#button-12,
+#button-15,
+#button-13,
+#button-16,
+#button-17,
+#button-18 {
+  background-color: rgb(49, 49, 49);
+  box-shadow: none;
+  opacity: 0.8;
+  box-shadow: 1px 1px 1px 2px rgba(193, 188, 188, 0.52);
+  border: none;
+  color: rgb(12, 245, 12);
+  color: rgb(12, 245, 12);
+}
+.btn-backspace,
+.btn-percent {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  font-weight: bold;
+  font-size: 25px;
+  color: rgb(12, 245, 12);
+
+  background-color: rgb(49, 49, 49);
+  opacity: 0.3;
+  box-shadow: none;
+}
+#button-4:hover,
+.btn-percent:hover,
+#button-8:hover,
+#button-12:hover,
+#button-15:hover,
+#button-13:hover,
+#button-16:hover,
+#button-17:hover,
+#button-18:hover,
+.btn-backspace:hover {
+  opacity: 1;
+}
+
+.btn-backspace:hover {
+  opacity: 1;
+}
+/* ..........BOX-3........... */
+.box-3 {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+}
+.btn-clear {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  color: blue;
+  opacity: 0.5;
+  background-color: rgb(160, 229, 72);
+  font-size: 25px;
+  font-weight: 500;
+}
+.btn-equal {
+  height: 40px;
+  width: 70%;
+  color: blue;
+  /* outline: none; */
+  opacity: 0.6;
+  /* color: white; */
+  font-size: 25px;
+  font-weight: bold;
+  background-color: rgb(143, 248, 6);
+  border-radius: 20px;
+}
+.btn-clear:hover,
+.btn-equal:hover {
+  opacity: 1;
+}
+
+/* ....... Responsiveness.........*/
+@media screen and (max-width: 801px) and (min-width: 400px) {
+  .container {
+    /* width: 400px; */
+  }
+  .calc {
+    /* width: 397px; */
+  }
+}
+@media screen and (max-width: 402px) {
+  .container {
+    width: 300px;
+    height: 500px;
+  }
+  .calc {
+  }
+}
+@media screen and (max-width: 303px) {
+  .container {
+    width: 250px;
+    height: 420px;
+    grid-template-rows: 0.5fr, 3fr, 0.5fr;
+  }
+  .button {
+    height: 40px;
+    width: 40px;
+    font-weight: 400;
+  }
+  .btn-backspace,
+  .btn-clear {
+    height: 40px;
+    width: 40px;
+    font-weight: 400;
+  }
+  .calc {
+    height: 60px;
+    font-weight: 300;
+    font-size: 30px;
+  }
+}
